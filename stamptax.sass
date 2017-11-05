@@ -179,49 +179,53 @@ h1
 // open menu
 
 .navi
-	position: fixed
-	height: 100%
-	right: -500px
-	top: 0
-	background-color: $white
-	@include transition
-	z-index: 1
+  position: fixed
+  height: 100%
+  width: 25%
+  right: -500px
+  top: 0
+  background-color: $white
+  @include transition
+  z-index: 1
 
-	.active-nav
-		border-bottom: 1px solid white
+  @media#{$smartPhonesBoth}
+    width: 100%
 
-	a
-		font-size: 20px
-		color: $purple
-		font-variant: small-caps
-		text-decoration: none
-		@include transition
+  .active-nav
+    border-bottom: 1px solid white
 
-	a:hover
-		text-decoration: none
-		border-bottom: 1px solid $purple
-		padding: 0px 0 5px 0
+  a
+    font-size: 20px
+    color: $purple
+    font-variant: small-caps
+    text-decoration: none
+    @include transition
+
+  a:hover
+    text-decoration: none
+    border-bottom: 1px solid $purple
+    padding: 0px 0 5px 0
 		@include lightningTransition
 
 
-	a.menu-text-open:hover
-		border: 0 solid
-		text-decoration: none
+  a.menu-text-open:hover
+  	border: 0 solid
+  	text-decoration: none
 
-	ul
-		list-style: none
-		text-align: center
-		padding: 0
-		position: absolute
-		@include transition
-		display: block
-		top: 50%
-		transform: translate(-50%, -50%)
-		left: 50%
+  ul
+  	list-style: none
+  	text-align: center
+  	padding: 0
+  	position: absolute
+  	@include transition
+  	display: block
+  	top: 50%
+  	transform: translate(-50%, -50%)
+  	left: 50%
 
-	li
-		padding-top: 20px
-		@include transition
+  li
+  	padding-top: 20px
+  	@include transition
 
 .navi.open
   position: fixed
