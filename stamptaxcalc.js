@@ -77,3 +77,5 @@ function calcStampDuty(price) {
 
   calculation (price);
 };
+
+var VHChromeFix=function(e){var t=this,n=navigator.userAgent.toLowerCase(),i=/chrome/.test(n)&&/android/.test(n),l=/crios/.test(n);(i||l)&&(this.getElements(e),this.fixAll(),this.windowWidth=window.innerWidth,this.windowHeight=window.innerHeight,window.addEventListener("resize",function(){t.windowWidth!==window.innerWidth&&t.windowHeight!==window.innerHeight&&(t.windowWidth=window.innerWidth,t.windowHeight=window.innerHeight,t.fixAll())}))};VHChromeFix.prototype.getElements=function(e){this.elements=[],e=this.isArray(e)?e:[e];for(var t=0;t<e.length;t++)for(var n=e[t].selector,i=document.querySelectorAll(n),l=0;l<i.length;l++)this.elements.push({domElement:i[l],vh:e[t].vh})},VHChromeFix.prototype.isArray=function(e){return"[object Array]"===Object.prototype.toString.call(e)},VHChromeFix.prototype.fixAll=function(){for(var e=0;e<this.elements.length;e++){var t=this.elements[e];t.domElement.style.height=window.innerHeight*t.vh/100+"px"}};
