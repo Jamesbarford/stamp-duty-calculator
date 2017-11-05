@@ -197,12 +197,6 @@ h1 {
   transition: .1s ease-in-out;
 }
 
-@media (min-width: 320px) and (max-width: 740px) {
-  .navi {
-    width: 100%;
-  }
-}
-
 .navi .active-nav {
   border-bottom: 1px solid white;
 }
