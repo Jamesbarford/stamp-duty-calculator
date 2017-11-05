@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<meta chartset="UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="stamptax.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<body>
+
+<nav>
+  <div id="navigation">
+    <div class="logo">
+      <h1 class="logo-text">branding</h1>
+      </div>
+        <div class="menu">
+          <a href="#" class="nav-text">buying</a>
+          <a href="#" class="nav-text">selling</a>
+          <a href="#" class="nav-text">letting</a>
+          <a href="#" class="nav-text">renting</a>
+          <a href="#" class="hamburger" onclick="openMenu()">menu &#x2630;</li>
+        </div>
+  </div>
+  <div class="navi">
+    <a href="JavaScript:Void(0)" class="menu-text-open" onclick="openMenu()">&#x2715;</a>
+    <ul>
+      <li><a href="#">link</a></li>
+      <li><a href="#">link</a></li>
+      <li><a href="#">link</a></li>
+      <li><a href="#">link</a></li>
+      <li><a href="#">link</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="firstPage" class="firstPage">
+  <div class="firstPage-text">
+    <h1 class="main-text">Stamp Duty</h1>
+  </div>
+</section>
+
+<section id="stampDuty">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="textblock col-lg-6 col-md-6 col-sm-12 col-sx-12">
+        <h1> Here is some blurb about stamp tax </h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </br>
+      <h2> A little bit more blurb </h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </br>
+      <h2>  Some more for good measure </h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+
+      <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-12 col-sx-12">
+        <div class="stamp">
+          <h3>Calculate Stamp Duty</h3>
+            <div class="fields">
+              <input id="purchase-price" class="input-stamp-duty" type="number" placeholder="Enter Purchase Price">
+              <button id="btn-calculate" class="btn-calculate-stamp-duty" onclick="calcStampDuty()">submit</button></input>
+              <input id="additional-home" type="checkbox">Additional Purchase</input>
+            </div>
+            <div class="results">
+              <div class="purchase-amount"><h3><strong>Price: </strong><div id="purchase-amount">£</div></h3></div>
+              <div class="tax"><h3><strong>Stamp Duty to Pay: </strong><div id="tax">£</div></h3></div>
+              <div class="rate"><h3><strong>Effective Rate: </strong><div id="rate"> </div></h3></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<hr> </hr>
+
+<section>
+    <div class="social">
+      <h1 class="social-header">Social</h1>
+    </div>
+<section>
+
+<footer>
+  <div class="footer">
+    <ul>
+      <li>link</li>
+      <li>link</li>
+      <li>link</li>
+      <li>link</li>
+      <li>link</li>
+      <li>link</li>
+    </ul>
+  </div>
+
+  <div class="bottom-footer">
+    <h4>Terms &amp; Conditions</h4>
+  </div>
+
+</footer>
+
+<script src="stamptaxcalc.js"></script>
+</body>
+</html>
