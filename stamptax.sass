@@ -1,0 +1,400 @@
+
+@mixin transition
+  -webkit-transition: .8s ease-in-out
+  -moz-transition: .8s ease-in-out
+  -o-transition: .8s ease-in-out
+  transition: .8s ease-in-out
+
+@mixin fastTransition
+	-webkit-transition: .3s ease-in-out
+	-moz-transition: .3s ease-in-out
+	-o-transition: .3s ease-in-out
+	transition: .3s ease-in-out
+
+@mixin lightningTransition
+	-webkit-transition: .1s ease-in-out
+  -moz-transition: .1s ease-in-out
+  -o-transition: .1s ease-in-out
+	transition: .1s ease-in-out
+
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
+@mixin footerIconHover
+	color: $nearBlack
+	background-color: transparent
+	border: 2px solid  $nearBlack
+	@include fastTransition
+
+//media queries
+
+$smartPhonesBoth: '(min-width: 320px) and (max-width: 740px)'
+$smartPhoneLandscape: '(min-width: 415px)'
+$smartPhonePortrait: '(max-width : 414px)'
+
+$ipadBoth: '(min-width : 768px) and (max-width : 1024px)'
+$ipadLandscape: '(min-width: 768px) and (max-width : 1024px) and (orientation : landscape)'
+$ipadPortrait: '(min-width: 768px) and (max-width: 1024px) and (orientation : portrait)'
+
+$Desktop: '(min-width : 1224px)'
+$largeScreen: '(min-width : 1824px)'
+
+$iphone5Both: '(min-width : 320px) and (max-width : 568px)'
+$iphone5Landscape: '(min-width: 320px) and (max-width: 568px) and (orientation : landscape)'
+$iphone5Portrait: '(min-width : 320px) and (max-width : 568px) and (orientation: portrait)'
+
+//colours
+$wworange: #de5f38
+$white: #fff
+$nearBlack: #333
+$blue: #0F143C
+$sansSerif: 'sansSerif'
+$purple: #612172
+$fadedblue: #F0EFF3
+$darkerFadedBlue: #aeb0bf
+
+body,html
+  height: 100%
+  min-height: 100%
+  background-color: $white
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  animation: fadein 1.5s
+  -moz-animation: fadein 1.5s
+  -webkit-animation: fadein 1.5s
+  -o-animation: fadein 1.5s
+  @include transition
+  +keyframes(fadein)
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+h4
+  font-size: 18px
+  color: $purple !important
+
+h3
+  font-size: 20px
+  font-weight: 500 !important
+  color: $purple !important
+
+h2
+  font-family: $sansSerif
+  color: $purple !important
+  letter-spacing: .75px
+  font-size: 30px
+  line-height: 1.00
+
+
+h1
+  color: $purple
+  letter-spacing: .75px
+  font-size: 46px
+  text-align: center
+
+
+//navigation
+
+#navigation
+  width: 100%
+  z-index: 1
+  height: 80px
+  position: relative
+  top: 0
+  background-color: rgba(255, 255, 255, 0.92)
+  @include transition
+
+  .menu
+    padding-top: 30px
+    text-align: center
+    padding-right: 30px
+    margin: auto 0 0 0
+
+    .hamburger
+      position: absolute
+      right: 0
+      margin-right: 30px
+
+		@media#{$smartPhonesBoth}
+			padding-right: 10px
+
+		a
+			margin-left: 12px
+			color: $purple
+			font-size: 18px
+			font-family: $sansSerif
+			font-variant: small-caps
+			text-decoration: none
+
+		@media#{$smartPhonesBoth}
+			padding-right: 10px
+			margin-left: 0
+
+.menu a:hover
+	text-decoration: none
+	border-bottom: 2px solid $purple
+	padding: 0px 0 5px 0
+	@include lightningTransition
+
+.nav-text a
+	font-size: 17px
+	font-variant: small-caps
+
+	@media#{$smartPhonesBoth}
+		display: none
+
+.nav-text
+	@media#{$smartPhonesBoth}
+		display: none
+
+.logo
+  position: absolute
+  height: 60px
+  margin-left: 30px
+  margin-top: 10px
+  background-color: $purple
+  width: 200px
+
+  @media#{$smartPhonesBoth}
+  	margin-left: 10px
+
+  .logo-text
+    position: absolute
+    padding-left: 60px
+    font-variant: small-caps
+    color: white
+    font-size: 18px
+
+    @media#{$smartPhonesBoth}
+      padding-left: 50px
+
+// open menu
+
+.navi
+	position: fixed
+	height: 100%
+	right: -500px
+	top: 0
+	background-color: $white
+	@include transition
+	z-index: 1
+
+	.active-nav
+		border-bottom: 1px solid white
+
+	a
+		font-size: 20px
+		color: $purple
+		font-variant: small-caps
+		text-decoration: none
+		@include transition
+
+	a:hover
+		text-decoration: none
+		border-bottom: 1px solid $purple
+		padding: 0px 0 5px 0
+		@include lightningTransition
+
+
+	a.menu-text-open:hover
+		border: 0 solid
+		text-decoration: none
+
+	ul
+		list-style: none
+		text-align: center
+		padding: 0
+		position: absolute
+		@include transition
+		display: block
+		top: 50%
+		transform: translate(-50%, -50%)
+		left: 50%
+
+	li
+		padding-top: 20px
+		@include transition
+
+.navi.open
+  position: fixed
+  width: 25%
+  right: 0px
+  height: 100%
+  background-color: $white
+  @include transition
+  z-index: 1
+
+  @media#{$smartPhonesBoth}
+    width: 100%
+
+.menu-text-open
+	position: absolute
+	right: 30px
+	top: 25px
+
+//firstPage
+
+#firstPage
+
+.firstPage
+	background: url("earlscourt.jpg")
+	background-position: 57%
+	background-size: cover
+	background-repeat: no-repeat
+	height: 90%
+	position: relative
+
+.firstPage-text
+	width: 100%
+	bottom: 0
+	position: absolute
+	height: 70px
+	background-image: linear-gradient(180deg, transparent 0%, #0f143c 100%)
+
+.firstPage-text h1
+  color: white
+  text-align: left
+  padding-left: 30px
+  font-size: 65px
+  position: absolute
+  bottom: 20px
+  font-weight: bold
+
+//calculator
+
+#stampDuty
+  position: relative
+  padding-top: 80px
+
+.stamp
+  display: block
+  margin: auto
+  padding: 40px
+  background-color: $fadedblue
+  border-radius: 3px
+
+  @media#{$smartPhonesBoth}
+    padding: 20px
+
+  @media#{$ipadBoth}
+    padding: 20px
+
+.fields
+  width: inherit
+  margin: 50px auto auto auto
+  width: 100%
+
+.results
+  padding-top: 30px
+  font-size: 18px
+  margin: auto
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+  -webkit-appearance: none
+  margin: auto
+
+input[type=number]
+  outline: none
+
+.input-stamp-duty
+  background-color: $white
+  color: $purple
+  font-size: 18px
+  padding: 15px 0px 15px 15px
+  width: 75%
+
+  @media#{$smartPhonesBoth}
+    width: 100%
+
+  @media#{$ipadBoth}
+    width: 100%
+
+.btn-calculate-stamp-duty
+  padding: 16px 20px 16px 20px
+  margin-left: -4px
+  font-size: 18px
+  font-weight: 500
+  background-color: $wworange
+  border-radius: 0
+  border-color: $wworange
+  color: $white
+
+  @media#{$smartPhonesBoth}
+    margin-top: 5px
+    margin-left: 0px
+
+  @media#{$ipadBoth}
+    margin-top: 5px
+    margin-left: 0px
+
+button:focus
+  outline: 0
+
+#additional-home
+  color: $purple
+
+input[type="checkbox"]
+  width: 40px
+  height: 40px
+
+//text block
+
+.textblock h1
+  text-align: left
+  color: $purple
+  padding-bottom: 20px
+
+
+//social
+
+.social
+  position: relative
+  margin: auto
+  background-color: $darkerFadedBlue
+  height: 180px
+
+  h1
+    color: white
+
+.social-header
+  position: absolute
+  margin: 0
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+//footer
+
+.footer
+  margin: auto
+  position: relative
+  background-color: $purple
+  height: 300px
+
+  ul
+    padding: 0
+    list-style: none
+    color: $white
+    position: absolute
+    margin: 0
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.bottom-footer
+  margin: auto
+  border-top: 0.5px solid white
+  height: 40px
+  background-color: $purple
+
+  h4
+    color: white !important
