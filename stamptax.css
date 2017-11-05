@@ -272,7 +272,7 @@ h1 {
 }
 
 .firstPage {
-  background: url("earlscourt.jpg");
+  background: url("houses.jpg");
   background-position: 57%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -414,7 +414,7 @@ input[type=number] {
   margin-left: -4px;
   font-size: 18px;
   font-weight: 500;
-  background-color: #de5f38;
+  background-color: #d0103a;
   border-radius: 0;
   border-color: #de5f38;
   color: #fff;
@@ -489,7 +489,7 @@ input[type="checkbox"] {
 .footer {
   margin: auto;
   position: relative;
-  background-color: #612172;
+  background-color: #425563;
   height: 300px;
 }
 
@@ -508,7 +508,7 @@ input[type="checkbox"] {
   margin: auto;
   border-top: 0.5px solid white;
   height: 40px;
-  background-color: #612172;
+  background-color: #425563;
 }
 
 .bottom-footer h4 {

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="stamptax.css">
+<link rel="stylesheet" href="stamptax.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <body>
 
@@ -43,19 +43,34 @@
   <div class="container-fluid">
     <div class="row">
       <div class="textblock col-lg-6 col-md-6 col-sm-12 col-sx-12">
-        <h1> Here is some blurb about stamp tax </h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h1> How it Works </h1>
+        <p>Calculating stamp duty can prove a little tricky. For example if you are purchasing a property for £800,000 the first £125,000 you are taxed 0%.
+          Then between £125,001 - £250,000 it is 2%, between £250,000 and £925,000 the rate is 5%.
+          <br></br>
+          <strong>
+            £0-£125,000	0%
+          </br>
+            £125,001-£250k	2%
+          </br>
+            £250,001-£925k	5%
+          </br>
+            £925,001-£1.5m	10%
+          </br>
+            £1.5m+	12%
+          <br></br>
+        </strong>
+          The maths is fairly fiddly. The amount you would be charged is: £35,000 with an effective rate of 3.8%.
+          <br></br>
+          If this is a second purchase you incur an additional 3%. The amount would then be £46,500 with an effective rate of 5.8%.
+      </p>
       </br>
-      <h2> A little bit more blurb </h2>
+      <h2> Here's Some Blurb </h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
       Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </br>
-      <h2>  Some more for good measure </h2>
+      <h2> And a Bit More For Good Measure </h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -74,7 +89,7 @@
             <div class="results">
               <div class="purchase-amount"><h3><strong>Price: </strong><div id="purchase-amount">£</div></h3></div>
               <div class="tax"><h3><strong>Stamp Duty to Pay: </strong><div id="tax">£</div></h3></div>
-              <div class="rate"><h3><strong>Effective Rate: </strong><div id="rate"> </div></h3></div>
+              <div class="rate"><h3><strong>Effective Rate: </strong><div id="rate">%</div></h3></div>
             </div>
           </div>
         </div>
@@ -108,7 +123,7 @@
 
 </footer>
 
-<script src="stamptaxcalc.js"></script>
+<script src="min.js"></script>
 <script>
 var vhFix = new VHChromeFix([
       {
