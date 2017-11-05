@@ -1,4 +1,4 @@
-# Stamp Duty calculator
+# Stamp Duty Calculator
 
 This is a UK residential Stamp Duty Calculator.
 
